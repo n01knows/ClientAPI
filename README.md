@@ -95,15 +95,11 @@ Status 200, (application/json):
 	"distance": 1000.0,
 	"timestamp": 1234567,
 	"assessment": 0.1,
-	"pollutants": {
-		"PM10": {
-			"measured": 203.0, "norm": 34.0 
-		}
-	}
+	"PM10": {"measured": 203.0, "norm": 34.0}
 }
 ```
 
 - **distance** (float) - distance to closest sensor in meters
 - **timestamp** (integer) - oldest pollutant reading UNIX TIMESTAMP GMT+0000
 - **assessment** (float) - 0.0 - 1.0 where 0.0 means stay at home and 1.0 is an air pollution within european norm. Can be `null` if the reading is too far and cannot be used for assessment.
-- **pollutants** (object) - list of pollutant readings with their respective european maximum norms.
+- **pollutants, example PM10** (object) - list of pollutant readings with their respective european maximum norms.
